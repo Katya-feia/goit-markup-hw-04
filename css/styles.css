@@ -89,6 +89,16 @@ color: var(--mt-color);
 }
 .header-contact-link{
     color: var(--nt-color);
+    display: flex;
+    gap: 10px;
+    align-items:center;
+}
+.header-contact-link:hover .header-icon,
+.header-contact-link:focus .header-icon{
+    fill: var(--blue);
+}
+.header-icon{
+    fill: var(--nt-color);
 }
 
 .header-nav-link:hover,
@@ -177,24 +187,32 @@ border-radius: 4px;
 .sec-benefits-item{
     width: 270px;
 }
-.sec-benefits-item::before{
+/*.sec-benefits-item::before{
     display: block;
     content: "";
     height: 120px;
     background-color: chartreuse;
 }
-.antenna::before{
-
+/*.antenna::before{
 }
 .clock::before{
-    border: darkgreen;
 }
 .diagram::before{
-    border: darkblue;
 }
 .astronaut::before{
-    border: rgb(190, 16, 45);
+}*/
+
+.benefits-icon-box{
+    width: 270px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-light);
+    border-radius: 4px;
 }
+
+/*.benefits-icon{}*/
 .sec-benefits-tit {
     font-weight: 700;
 font-size: 14px;
@@ -244,7 +262,7 @@ font-size: 16px;
 line-height: calc(19/16);
 text-align: center;
 letter-spacing: 0.03em;
-padding-bottom: 10px;
+margin-bottom: 10px;
 }
 .sec-team-text {
     font-weight: 400;
@@ -255,31 +273,39 @@ letter-spacing: 0.03em;
 color: var(--nt-color);
 margin-bottom: 16px;
 }
-.team-soc-list{
+.team-soc-list,
+.footer-soc-list{
     display: flex;
-    justify-content: center;
     gap: 10px;
 }
-.sec-team-soc{
+.team-soc-list{
+    justify-content: center;
+}
+.sec-team-soc,
+.footer-soc-item{
     width: 44px;
     height: 44px;
 }
-.sec-team-link{
+.sec-team-link,
+.footer-soc-link{
     width: 100%;
     height: 100%;
-    background-color:var(--wight);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+.sec-team-link{
+    background-color:var(--wight);
+}
 .team-soc-icon{
     fill: var(--icon1);
 }
 
 .sec-team-link:hover,
-.sec-team-link:focus{
+.sec-team-link:focus,
+.footer-soc-link:hover,
+.footer-soc-link:focus{
     background-color: var(--blue);
 }
 .sec-team-link:hover .team-soc-icon,
@@ -322,6 +348,13 @@ border: 1px solid var(--blue);
     padding-top: 60px;
     padding-bottom: 60px;
 }
+.footer-content{
+    display: flex;
+    gap: 70px;
+    justify-content: flex-start;
+    align-items: baseline;
+
+}
 .l-footer {
     color: #FFFFFF;
 }
@@ -357,8 +390,23 @@ margin-top: 20px;
     color: var(--blue);  
 }
 
-
-
+.footer-tit{
+    font-weight: 700;
+font-size: 14px;
+line-height: calc(16/14);
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--wight);
+}
+.footer-soc-list{
+    margin-top: 20px;
+}
+.footer-soc-link{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-soc-icon{
+    fill: var(--wight);
+}
 .sec-filter-list {
     display: flex;
     justify-content: center;
@@ -387,6 +435,7 @@ padding: 6px 25px;
 }
 
 
+
 .sec-projects-list {
     display: flex;
    flex-wrap: wrap;
@@ -408,6 +457,7 @@ font-size: 18px;
 line-height: calc(36/18);
 letter-spacing: 0.06em;
 margin-bottom: 4px;
+color: var(--mt-color);
 }
 .sec-projects-text {
     font-weight: 400;
@@ -415,4 +465,14 @@ font-size: 16px;
 line-height: calc(30/16);
 letter-spacing: 0.03em;
 color: var(--nt-color);
+}
+
+.projects-link{
+    text-decoration: none;
+    font-style: normal;
+}
+.sec-projects-item:hover,
+.sec-projects-item:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
 }
